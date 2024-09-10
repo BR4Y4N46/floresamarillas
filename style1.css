@@ -1,0 +1,102 @@
+/* Reset de estilos por defecto */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+/* Estilo general para el cuerpo de la página */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1c1c1c;
+    color: #fff;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* Estilo para los mensajes de bienvenida */
+.greetings {
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+/* Animación para el texto de "TE AMO" */
+.greetings span {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.7), 0 0 10px rgba(255, 0, 0, 0.5), 0 0 15px rgba(255, 0, 0, 0.3);
+    animation: flicker 1s infinite;
+}
+
+@keyframes flicker {
+    0%, 100% {
+        text-shadow: 0 0 5px rgba(255, 0, 0, 0.7), 0 0 10px rgba(255, 0, 0, 0.5), 0 0 15px rgba(255, 0, 0, 0.3);
+    }
+    50% {
+        text-shadow: 0 0 2px rgba(255, 0, 0, 0.5), 0 0 4px rgba(255, 0, 0, 0.3), 0 0 6px rgba(255, 0, 0, 0.1);
+    }
+}
+
+/* Estilo para la descripción */
+.description {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 1rem;
+    font-style: italic;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Estilo para el botón */
+.button {
+    margin: 1rem;
+}
+
+button {
+    background: linear-gradient(45deg, #ff6f00, #ff3d00);
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #ff3d00, #ff6f00);
+    transform: scale(1.1);
+}
+
+button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Efecto para el texto "hermoso" */
+.description span {
+    display: inline-block;
+    font-size: 2rem;
+    color: #ff66b2;
+    background: linear-gradient(45deg, #ff66b2, #ff3399);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.description:hover span {
+    transform: scale(1.1);
+    color: #ff3399;
+}
